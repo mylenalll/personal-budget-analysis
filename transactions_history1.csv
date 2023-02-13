@@ -1,0 +1,239 @@
+Type,Created date,Description,Amount,State
+TRANSFER,"2022-10-04
+13:42:54",From Dmytro Lysianiuk,6.23,Completed
+EXCHANGE,"2022-10-04
+13:44:46",Exchanged to GBP,-6.23,Completed
+CARD_PAYMENT,"2022-10-08
+19:40:15",apple.com/bill,0.00,Completed
+TOPUP,"2022-10-10
+19:02:54",Payment from Aniket Kumar,67.20,Completed
+TRANSFER,"2022-10-11
+12:31:49",To Dmitrii Ivanov,-6.57,Failed
+CARD_PAYMENT,"2022-10-11
+13:13:24",First Glasgow,0.00,Completed
+CARD_PAYMENT,"2022-10-11
+13:23:55",First Glasgow,-5.00,Completed
+CARD_PAYMENT,"2022-10-11
+14:56:34",Cowcaddens Subway,-3.30,Completed
+CARD_PAYMENT,"2022-10-13
+12:33:11",Tesco Stores 6353,-6.57,Completed
+TRANSFER,"2022-10-13
+17:12:47",To Dmitrii Ivanov,-6.57,Completed
+CARD_PAYMENT,"2022-10-14
+18:14:18",Mcdonalds,-3.44,Completed
+CARD_PAYMENT,"2022-10-15
+14:37:34",Tesco Stores 5668,-3.24,Completed
+CARD_PAYMENT,"2022-10-15
+18:06:26",Poundland,-3.00,Completed
+CARD_PAYMENT,"2022-10-15
+18:16:57",Merchant City Post Off,-2.00,Completed
+CARD_PAYMENT,"2022-10-16
+14:37:38",Tesco Stores 5668,-6.57,Completed
+CARD_PAYMENT,"2022-10-16
+15:32:05",Boots 0602,-3.50,Completed
+CARD_PAYMENT,"2022-10-16
+15:34:29",Boots 0602,-4.00,Completed
+CARD_PAYMENT,"2022-10-16
+15:49:36",Superdrug Stores Plc,-21.14,Declined
+CARD_PAYMENT,"2022-10-16
+15:50:22",Superdrug Stores Plc,-21.14,Completed
+CARD_PAYMENT,"2022-10-16
+15:54:44",Tesco Stores 5668,-1.65,Completed
+TRANSFER,"2022-10-17
+21:22:35",From Ihor Svyryd,217.11,Completed
+TRANSFER,"2022-10-17
+21:24:19",To Dmitrii Ivanov,-200.00,Completed
+CARD_PAYMENT,"2022-10-18
+12:26:56",apple.com/bill,-0.79,Completed
+CARD_PAYMENT,"2022-10-19
+12:35:13",Tesco Stores 6353,-13.14,Completed
+CARD_PAYMENT,"2022-10-20
+21:35:17",Sainsburys,-1.35,Completed
+TOPUP,"2022-10-21
+10:57:09",Payment from Arsheed Tantray,72.29,Failed
+TOPUP,"2022-10-21
+10:58:16",Payment from Arsheed Tantray,72.29,Failed
+TOPUP,"2022-10-21
+10:59:36",Payment from Arsheed Tantray,72.29,Failed
+TOPUP,"2022-10-21
+11:02:33",Payment from Arsheed Tantray,72.29,Completed
+REWARD,"2022-10-23
+12:08:03",Your reward for completing the challenge,10.00,Completed
+CARD_PAYMENT,"2022-10-23
+14:39:56",Sumup *spitfire Espres,-3.80,Completed
+CARD_PAYMENT,"2022-10-23
+17:50:54",Sainsburys,-6.55,Completed
+CARD_PAYMENT,"2022-10-24
+10:39:48",Lycamobile,-12.00,Completed
+CARD_PAYMENT,"2022-10-25
+10:13:29",Tesco Stores 6353,-13.14,Completed
+CARD_PAYMENT,"2022-10-25
+10:20:01",Aldi Stores Limited,-2.49,Completed
+CARD_PAYMENT,"2022-10-25
+10:27:43",Tesco Stores 6353,-2.00,Completed
+TOPUP,"2022-10-27
+16:44:28",Payment from Dmitrii Ivanov,4.00,Completed
+CARD_PAYMENT,"2022-10-27
+17:19:51",Aldi Stores Limited,-10.50,Completed
+CARD_PAYMENT,"2022-10-27
+17:30:56",Tesco Stores 6353,-3.05,Completed
+CARD_PAYMENT,"2022-10-27
+19:24:45",Facebk Ads,0.00,Completed
+CARD_PAYMENT,"2022-10-27
+19:25:01",Facebk Ads,0.00,Completed
+CARD_PAYMENT,"2022-10-27
+19:25:16",Facebk Ads,0.00,Completed
+TRANSFER,"2022-10-28
+19:22:28",From Vladyslav Baliuk,255.16,Completed
+CARD_PAYMENT,"2022-10-28
+19:25:26",Google *temporary Hold,0.00,Completed
+CARD_PAYMENT,"2022-10-28
+19:25:39",Ikea Ltd Shop Online,-231.50,Completed
+CARD_PAYMENT,"2022-10-29
+11:03:10",Greggs,-1.35,Completed
+CARD_PAYMENT,"2022-10-30
+13:13:14",Tesco Stores 5668,-14.14,Completed
+CARD_PAYMENT,"2022-10-30
+20:41:27",Tesco Stores 6353,-1.65,Completed
+CARD_PAYMENT,"2022-10-30
+20:42:32",Fast News,-2.30,Completed
+CARD_PAYMENT,"2022-11-01
+17:21:22",Mcgill S,0.00,Completed
+CARD_PAYMENT,"2022-11-01
+17:31:57",Mcgill S,-4.70,Completed
+CARD_PAYMENT,"2022-11-01
+20:45:21",Ikea Ltd 266 Glasgow Ikea,-7.40,Completed
+TRANSFER,"2022-11-01
+22:37:10",To Dmitrii Ivanov,-9.35,Completed
+CARD_PAYMENT,"2022-11-02
+16:31:47",Ztl*laboratorio Espres,-3.40,Completed
+CARD_PAYMENT,"2022-11-02
+17:43:41",Sainsburys,-1.50,Completed
+CARD_PAYMENT,"2022-11-03
+18:39:04",Marks&Spencer Plc,-2.00,Completed
+TRANSFER,"2022-11-04
+13:24:08",From Oleksii Borysovych,95.02,Completed
+TRANSFER,"2022-11-04
+13:25:22",To Dmitrii Ivanov,-29.00,Completed
+CARD_PAYMENT,"2022-11-04
+13:38:35",Tesco Stores 6353,-19.14,Completed
+CARD_PAYMENT,"2022-11-07
+20:24:46",Google *temporary Hold,0.00,Completed
+CARD_PAYMENT,"2022-11-07
+20:25:40",Zoom.us 888-799-9666,0.00,Completed
+CARD_PAYMENT,"2022-11-07
+20:25:47",Zoom.us 888-799-9666,-14.39,Completed
+TRANSFER,"2022-11-07
+21:31:47",To Dmitrii Ivanov,-18.00,Completed
+CARD_PAYMENT,"2022-11-07
+22:10:04",Barretts Newsagent,-7.99,Completed
+CARD_PAYMENT,"2022-11-07
+22:10:28",Barretts Newsagent,-1.09,Completed
+CARD_PAYMENT,"2022-11-09
+17:16:29",Zettle_*draw Art Store,-4.00,Completed
+TOPUP,"2022-11-09
+17:24:23",Payment from Dmitrii Ivanov,15.00,Completed
+CARD_PAYMENT,"2022-11-09
+17:24:48",Ryman 1197,-22.49,Completed
+TOPUP,"2022-11-09
+17:30:11",Payment from Dmitrii Ivanov,1.00,Completed
+CARD_PAYMENT,"2022-11-09
+17:30:36",Barretts Newsagent,-7.99,Completed
+TRANSFER,"2022-11-10
+22:42:58",From Mark Onufriichuk,60.91,Completed
+TRANSFER,"2022-11-10
+22:43:30",To Dmitrii Ivanov,-18.00,Completed
+CARD_PAYMENT,"2022-11-11
+21:48:37",Tesco Stores 5630,-7.66,Completed
+CARD_PAYMENT,"2022-11-12
+11:36:34",Perch And Rest,-8.50,Completed
+CARD_PAYMENT,"2022-11-12
+14:34:16",First Glasgow,0.00,Completed
+CARD_PAYMENT,"2022-11-12
+18:50:58",First Glasgow,-2.65,Completed
+CARD_PAYMENT,"2022-11-12
+21:04:18",Subway 21963 Byres Road,-5.90,Completed
+CARD_PAYMENT,"2022-11-13
+13:34:53",Vodafone Limited,-15.00,Completed
+CARD_PAYMENT,"2022-11-13
+15:25:08",First Glasgow,-2.65,Completed
+CARD_PAYMENT,"2022-11-13
+17:00:50",First Glasgow,-2.65,Declined
+CARD_PAYMENT,"2022-11-13
+22:58:09",Vodafone E-Commerce,0.00,Completed
+CARD_PAYMENT,"2022-11-13
+22:58:21",Vodafone Moto,0.00,Completed
+CARD_PAYMENT,"2022-11-13
+23:00:17",Vodafone E-Commerce,0.00,Completed
+CARD_PAYMENT,"2022-11-13
+23:00:23",Vodafone Moto,0.00,Completed
+CARD_PAYMENT,"2022-11-14
+10:06:42",First Glasgow,-2.65,Completed
+TRANSFER,"2022-11-14
+11:12:09",From Lev Rybalko,73.41,Completed
+CARD_PAYMENT,"2022-11-14
+11:49:57",Tesco Stores 5630,-13.14,Completed
+CARD_PAYMENT,"2022-11-14
+17:02:24",First Glasgow,-2.65,Reverted
+TRANSFER,"2022-11-15
+11:57:50",To Dmitrii Ivanov,-35.00,Completed
+CARD_PAYMENT,"2022-11-18
+05:27:26",apple.com/bill,-0.79,Completed
+TRANSFER,"2022-11-18
+12:55:46",From Maksims Pantelejevs,63.92,Completed
+CARD_PAYMENT,"2022-11-18
+13:42:41",Dumbarton Road,-9.95,Completed
+CARD_PAYMENT,"2022-11-18
+13:51:29",Tesco Stores 5630,-13.14,Completed
+CARD_PAYMENT,"2022-11-18
+18:59:39",W M Morrison Store,-5.00,Completed
+CARD_PAYMENT,"2022-11-20
+13:04:52",Wanderlust Cafe Bistro,-1.20,Completed
+CARD_PAYMENT,"2022-11-20
+19:01:31",Primark 650,-17.10,Completed
+CARD_PAYMENT,"2022-11-21
+14:11:48",Ubr* Pending.uber.com,-7.25,Completed
+CARD_PAYMENT,"2022-11-21
+15:37:14",Lothian Buses Limited,0.00,Completed
+CARD_PAYMENT,"2022-11-21
+19:24:53",Greggs Plc,-1.15,Completed
+CARD_PAYMENT,"2022-11-21
+19:32:48",Buchanan St Subway,-1.75,Completed
+CARD_PAYMENT,"2022-11-22
+05:41:49",Lothian Buses Limited,-1.80,Completed
+CARD_PAYMENT,"2022-11-22
+10:47:51",Tesco Stores 5630,-18.55,Completed
+CARD_PAYMENT,"2022-11-23
+18:42:26",Lidl Gb Partick,-3.43,Completed
+CARD_PAYMENT,"2022-11-23
+18:53:02",W M Morrison Store,-3.49,Completed
+TRANSFER,"2022-11-25
+17:54:59",From OLEKSANDRA NASTENKO,44.83,Completed
+CARD_PAYMENT,"2022-11-26
+10:18:01",Perch And Rest,-6.70,Completed
+CARD_PAYMENT,"2022-11-26
+13:28:16",Tesco Stores 5630,-3.00,Completed
+CARD_PAYMENT,"2022-11-26
+13:48:28",Lidl Gb Partick,-6.91,Completed
+CARD_PAYMENT,"2022-11-26
+15:40:02",Vesta *vodafone Topup,0.00,Completed
+CARD_PAYMENT,"2022-11-27
+13:02:23",Tesco Stores 5630,-5.50,Completed
+TRANSFER,"2022-12-02
+14:39:28",From BOHDAN KOZARENKO,150.00,Completed
+TRANSFER,"2022-12-02
+14:43:38",From AZIZ AZIZOV,118.63,Completed
+TRANSFER,"2022-12-02
+14:44:42",To Dmitrii Ivanov,-267.00,Completed
+CARD_PAYMENT,"2022-12-02
+16:08:49",Abellio Scotrail Ltd,-1.80,Completed
+CARD_PAYMENT,"2022-12-02
+20:57:37",Sainsburys-Glasgow Byr,-1.90,Completed
+CARD_PAYMENT,"2022-12-02
+22:41:57",apple.com/bill,-3.49,Completed
+CARD_PAYMENT,"2022-12-03
+16:35:55",Lidl Gb Partick,-6.71,Completed
+CARD_PAYMENT,"2022-12-04
+13:32:45",Sq *hinbagla,-5.90,Completed
+TRANSFER,"2022-12-05
+09:10:30",To Dmitrii Ivanov,-7.07,Completed
