@@ -2,10 +2,10 @@
 
 ## Skills demonstrated 
 
-* cleaning the bank data to prepare for the analysis
-* searching for insights and dependencies in data
-* plotting with **ggplot2**
-* commenting code so that it can be understood by others
+- cleaning the bank data to prepare for the analysis
+- searching for insights and dependencies in data
+- plotting with **ggplot2**
+- commenting code so that it can be understood by others
 
 ## The data
 
