@@ -2,8 +2,6 @@ library(ggplot2)
 library(lubridate)
 library(tidyverse)
 
-
-
 # ============================================================================== 
 # pre-processing the first data set
 # ==============================================================================
@@ -77,20 +75,26 @@ revolutdata$date <- as.Date(revolutdata$date, "%Y-%m-%d")
 # compound of two data sets
 # ==============================================================================
 
+
 totaldata <- rbind(revolutdata, bankdata)
+
+# add a month field for aggregation
+totaldata$month <- month(totaldata$date)
+
 
 # ============================================================================== 
 # analysis
 # ==============================================================================
 
+
 # 1) food expense 
 
-home_food_key <- c("lidl gb partick", "tesco stores", "toogoodtog", "aldi", "sainsburys")
+home_food_key <- c("lidl gb partick", "tesco stores", "toogoodtog", "aldi", "sainsburys", "morrison", "spar")
 home_food_key_pattern <- paste(home_food_key, collapse = '|')
 
-totaldata$caterogy[grepl(home_food_key_pattern, totaldata$description)] <- "home food"
+totaldata$category[grepl(home_food_key_pattern, totaldata$description)] <- "home food"
 
-totaldata_homefood <- subset(totaldata, caterogy == "home food")
+totaldata_homefood <- subset(totaldata, category == "home food")
 
 # sum of home food expense by month
 totaldata_homefood_bymonth <- as.data.frame( totaldata_homefood  %>% 
@@ -103,21 +107,13 @@ totaldata_homefood_bymonth <- totaldata_homefood_bymonth[-c(5),]
 # format date
 totaldata_homefood_bymonth$month <- format(totaldata_homefood_bymonth$month, "%m-%Y")
 
-# plotting my monthly food expense
-totaldata_homefood_bymonth$month <- factor(totaldata_homefood_bymonth$month, levels = totaldata_homefood_bymonth$month)
-
-plot_food_bymonth <- ggplot(totaldata_homefood_bymonth, aes(month, sum_of_expenses)) +
-  geom_bar(stat = "identity") +
-  geom_hline(aes(yintercept = mean(sum_of_expenses)))
-
-
 # 2) nicotine expense 
 
-totaldata$caterogy[totaldata$paidout == 5.50 | totaldata$paidout == 11.00 | totaldata$paidout == 6.57 | totaldata$paidout == 13.14 | totaldata$paidout == 7.99] <- "nicotine"
+totaldata$category[totaldata$paidout == 5.50 | totaldata$paidout == 11.00 | totaldata$paidout == 6.57 | totaldata$paidout == 13.14 | totaldata$paidout == 7.99] <- "nicotine"
 
-totaldata_nicotine <- subset(totaldata, caterogy == "nicotine")
+totaldata_nicotine <- subset(totaldata, category == "nicotine")
 
-# sum of home food expense by month
+# sum of nicotine expense by month
 totaldata_nicotine_bymonth <- as.data.frame( totaldata_nicotine  %>% 
              group_by(month = floor_date(date, 'month')) %>%
              summarize(sum_of_expenses = sum(paidout)) )
@@ -126,7 +122,8 @@ totaldata_nicotine_bymonth <- as.data.frame( totaldata_nicotine  %>%
 totaldata_nicotine_bymonth$month <- format(totaldata_nicotine_bymonth$month, "%m-%Y")
 
 
-# =============== dependencies between nicotine and food expenses ==============
+# ============= dependencies between nicotine and food expenses ================
+
 
 # compound two tables
 food_and_nicotine <- cbind(totaldata_homefood_bymonth, totaldata_nicotine_bymonth)
@@ -134,15 +131,71 @@ food_and_nicotine <- food_and_nicotine[, -c(3)]
 colnames(food_and_nicotine) <- c('month', 'food', 'nicotine')
 
 dependence_plot <- ggplot(food_and_nicotine, aes(food, nicotine)) + 
-  geom_point() +
-  geom_smooth()
+  geom_point(size = 2, color = "#27ae60") +
+  geom_smooth(method = "lm", color = "#e67e22", linetype = "dashed", fill = "#f1c40f") +
+  theme(panel.background = element_blank())
+
+fit <- lm(nicotine ~ food, food_and_nicotine)
+summary(fit)
+# Multiple R-squared:  0.8503,	Adjusted R-squared:  0.7755 
+# F-statistic: 11.36 on 1 and 2 DF,  p-value: 0.07788
 
 
 # 3) transport expense 
 
-transport_key <- c("subway", "first glasgow", "mcgill", "tfl travel ch")
+
+transport_key <- c("subway", "first glasgow", "mcgill", "tfl travel ch", "lothian", "scotrail")
 transport_key_pattern <- paste(transport_key, collapse = '|')
 
-totaldata$caterogy[grepl(transport_key_pattern, totaldata$description)] <- "transport"
+totaldata$category[grepl(transport_key_pattern, totaldata$description)] <- "transport"
 
+
+# 3) eating out expense 
+
+
+eatout_key <- c("perch and rest", "subway 21963 byres road", "mcdonalds", "greggs", "hinba", "meadow", "yole", "starbucks")
+eatout_key_pattern <- paste(eatout_key, collapse = '|')
+
+totaldata$category[grepl(eatout_key_pattern, totaldata$description)] <- "eat out"
+
+
+# ============================================================================== 
+# plotting
+# ==============================================================================
+
+
+# monthly food expense
+totaldata_homefood_bymonth$month <- factor(totaldata_homefood_bymonth$month, levels = totaldata_homefood_bymonth$month)
+
+plot_food_bymonth <- ggplot(totaldata_homefood_bymonth, aes(month, sum_of_expenses)) +
+  geom_bar(stat = "identity", fill = "#27ae60") +
+  geom_hline(aes(yintercept = mean(sum_of_expenses)), col = "#e67e22", size = 1) +
+  annotate("text", x = 3.5, y = mean(totaldata_homefood_bymonth$sum_of_expenses) + 6, label = mean(totaldata_homefood_bymonth$sum_of_expenses), col = "#e67e22") +
+  theme(panel.background = element_blank()) +
+  labs(x = "month", y = "food expense (£)")
+
+
+# build summary table of monthly spend per class
+summary_table <- as.data.frame( totaldata  %>% 
+         group_by(month = floor_date(date, 'month'), category = category) %>%
+         summarize(sum_of_expenses = sum(paidout)) )
+
+# format date
+summary_table$month <- as.Date(format(summary_table$month, "%m-%Y"))
+
+# delete rows without category
+summary_table <- subset(summary_table, is.na(summary_table$category) == F)
+
+str(summary_table)
+# summary_table$month <- factor(summary_table$month, levels = unique(summary_table$month))
+
+summary_table$month <- as.Date(summary_table$month, "%m-%Y")
+
+summary_plot <- ggplot(summary_table, aes(month, sum_of_expenses, col = category)) +
+  facet_wrap(~category, ncol=2, scale="free_y") +
+  geom_smooth(method="loess", se=F) + geom_point(size = 2.5) +
+  theme(axis.text.x = element_text(angle = 45, hjust=1), legend.position="none") +
+  labs(x = "", y = "monthly total (£)") + 
+  scale_x_date(date_labels = "%B") + 
+  theme(panel.background = element_blank()) 
 
